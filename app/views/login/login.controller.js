@@ -2,21 +2,18 @@
     'use strict';
 
     angular
-        .module('hotFoodLogin')
+        .module('hotFood')
         .controller('LoginController', LoginController);
 
-
-    function LoginController($state, $scope) {
-        var vm = this;
-        vm.title = 'LoginController';
+    function LoginController($scope , $location) {
 
         $scope.alteraRota = alteraRota;
 
-        function alteraRota($state) {
-            console.log("Foi");
-            $state.go(state);
+        function alteraRota() {
         }
+
     }
+
 
 })();
 

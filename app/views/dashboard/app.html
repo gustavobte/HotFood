@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dasboard</title>
+
+    <!--Import css-->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <!--Import NPM -->
+    <script src="../../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../../node_modules/angular/angular.js"></script>
+    <script src="../../../node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../../../node_modules/oclazyload/dist/ocLazyLoad.js"></script>
+
+    <!--Import Interno-->
+    <script src="../../config/hot-app.module.js"></script>
+    <script src="../../config/hot-login.module.js"></script>
+    <script src="../login/login.controller.js"></script>
+
+
+</head>
+<body ng-app="hotFood">
+<h1>APP - </h1>
+<div ui-view="header"></div>
+<div ui-view="nav"></div>
+<div ui-view="content"></div>
+
+</body>
+</html>

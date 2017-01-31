@@ -1,5 +1,5 @@
 angular
-    .module('hotFood',['hotFoodLogin','oc.lazyLoad']);
+    .module('hotFood',['ui.router','hotFoodLogin','oc.lazyLoad']);
 
 
 // Modulo principal da aplicação
