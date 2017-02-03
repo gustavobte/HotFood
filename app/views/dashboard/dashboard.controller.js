@@ -5,21 +5,19 @@
         .module('hotFood')
         .controller('DashboardController', DashboardController);
 
-    DashboardController.$inject = ['dependency'];
 
-    /* @ngInject */
-    function DashboardController(dependency) {
-        var vm = this;
-        vm.title = 'DashboardController';
+    function DashboardController($scope, $mdSidenav) {
 
-        activate();
-
-        ////////////////
-
-        function activate() {
-            code
-        }
+        $scope.showMobileMainHeader = true;
+        $scope.openSideNavPanel = function() {
+            $mdSidenav('left').open();
+        };
+        $scope.closeSideNavPanel = function() {
+            $mdSidenav('left').close();
+        };
     }
+
+
 
 })();
 

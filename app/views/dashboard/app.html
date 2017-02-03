@@ -2,29 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dasboard</title>
+    <title>:: HotFood ::</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!--Import css-->
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../../app/views/dashboard/dashboard.style.css">
+    <link rel="stylesheet" href="../../../node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet" href="../../../node_modules/node-materialize/bin/materialize.css">
+
 
     <!--Import NPM -->
     <script src="../../../node_modules/jquery/dist/jquery.js"></script>
     <script src="../../../node_modules/angular/angular.js"></script>
+    <script src="../../../node_modules/angular-animate/angular-animate.js"></script>
+    <script src="../../../node_modules/angular-aria/angular-aria.js"></script>
+    <script src="../../../node_modules/angular-material/angular-material.js"></script>
+    <script src="../../../node_modules/node-materialize/bin/materialize.js"></script>
+    <script src="../../../node_modules/angular-materialize/src/angular-materialize.js"></script>
     <script src="../../../node_modules/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="../../../node_modules/oclazyload/dist/ocLazyLoad.js"></script>
 
     <!--Import Interno-->
-    <script src="../../config/hot-app.module.js"></script>
-    <script src="../../config/hot-login.module.js"></script>
-    <script src="../login/login.controller.js"></script>
+    <script src="../../../app/config/hot-login.module.js"></script>
+    <script src="../../../app/config/hot-app.module.js"></script>
+    <script src="../../../app/config/hot-rotas.config.js"></script>
+    <script src="../../../app/views/dashboard/dashboard.controller.js"></script>
+
+
 
 
 </head>
-<body ng-app="hotFood">
-<h1>APP - </h1>
-<div ui-view="header"></div>
-<div ui-view="nav"></div>
-<div ui-view="content"></div>
+<body ng-app="hotFood" ng-controller="DashboardController" ng-cloak>
+
+<nav class="navbar navbar-light bg-faded">
+
+    <div class="collapse amber darken-4" id="exCollapsingNavbar">
+        <md-button class="md-icon-button" aria-label="Side Panel" ng-click="openSideNavPanel()">
+            <md-tooltip>Menu</md-tooltip>
+            <md-icon class="md-default-theme white" class="material-icons">&#xE5D2;</md-icon>
+        </md-button>
+    </div>
+</nav>
+
+
+<!-- Page Layout here -->
+<div class="row">
+    <div class="col s9 telaLogin">
+
+    </div>
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2 "
+                md-component-id="left">
+        <md-toolbar layout="row">
+            <div class="md-toolbar-tools amber darken-4">
+                <h2>
+                    <span>HotFood</span>
+                </h2>
+                <span flex></span>
+                <md-button class="md-icon-button" aria-label="Close Side Panel" ng-click="closeSideNavPanel()">
+                    <md-tooltip>Fechar</md-tooltip>
+                    <md-icon class="md-default-theme " class="material-icons">&#xE5CD;</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-content layout-padding="">
+            <md-list>
+                <md-subheader class="md-no-sticky">Funcionario</md-subheader>
+                <md-list-item>
+                    <md-icon class="md-default-theme" class="material-icons">&#xE0C9;</md-icon>
+                    <p>Messages</p>
+                    <div class="md-secondary">2</div>
+                </md-list-item>
+                <md-list-item>
+                    <md-icon class="md-default-theme" class="material-icons">&#xE878;</md-icon>
+                    <p>Events</p>
+                    <md-icon class="md-secondary">2</md-icon>
+                </md-list-item>
+                <md-list-item>
+                    <md-icon class="md-default-theme" class="material-icons">&#xE251;</md-icon>
+                    <p>Photos</p>
+                    <md-icon class="md-secondary">2</md-icon>
+                </md-list-item>
+                <md-divider></md-divider>
+                <md-subheader class="md-no-sticky">Pages</md-subheader>
+                <md-list-item>
+                    <md-icon class="md-default-theme" class="material-icons">&#xE7F9;</md-icon>
+                    <p>Pages Feed</p>
+                    <div class="md-secondary">2</div>
+                </md-list-item>
+                <md-list-item>
+                    <md-icon class="md-default-theme" class="material-icons">&#xE1BC;</md-icon>
+                    <p>Like Pages</p>
+                    <div class="md-secondary">20+</div>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </md-sidenav>
+</div>
+
+
 
 </body>
 </html>
